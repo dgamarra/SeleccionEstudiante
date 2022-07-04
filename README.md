@@ -24,7 +24,7 @@ Identificador | HU002
 Nombre | aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 Descripción | 	
 Puntos de historia (días ideales) |	
-Criterios de aceptación	 | 
+Ítem | Criterios de aceptación	
 1 |	
 2 |	   
 	
