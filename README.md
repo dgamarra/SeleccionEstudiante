@@ -346,6 +346,14 @@ Andrew->>China: I am good thanks!
 
 ### End	
 	
-	
+Here is a simple flow chart:
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```	
 	
 	
