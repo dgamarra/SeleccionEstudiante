@@ -324,7 +324,8 @@ $$\sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$
                 
 ### FlowChart
 
-```flow
+```mermaid
+flowchart TD
 st=>start: Login
 op=>operation: Login operation
 cond=>condition: Successful Yes or No?
