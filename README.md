@@ -324,7 +324,7 @@ $$\sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$
                 
 ### FlowChart
 
-``` flow
+```flow
 st=>start: Login
 op=>operation: Login operation
 cond=>condition: Successful Yes or No?
@@ -333,7 +333,7 @@ e=>end: To admin
 st->op->cond
 cond(yes)->e
 cond(no)->op
-```
+´´´
 
 ### Sequence Diagram
                     
