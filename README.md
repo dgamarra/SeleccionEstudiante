@@ -326,14 +326,34 @@ $$\sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$
 
 ```mermaid
 flowchart TD
-st=>start: Login
-op=>operation: Login operation
-cond=>condition: Successful Yes or No?
-e=>end: To admin
+A[Hard] -->|Text| B(Round)
+B --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]
+```
 
-st->op->cond
-cond(yes)->e
-cond(no)->op
+```mermaid
+flowchart LR
+A[Hard] -->|Text| B(Round)
+B --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]
+```
+
+```mermaid
+journey
+	title Me studying for exams
+	section Exam is announced
+		I start studying: 1: Me
+		Make notes: 2: Me
+		Ask friend for help: 3: Me, Friend
+		We study togther: 5: Me, Friend
+	section Exam Day
+		Syllabys is incomplete: 2: Me
+		Give exam: 1: Me, Friend
+	section Result Declared
+		I passed the exam with destinction!: 5: Me
+		Friend barely gets passing marks: 2: Friend
 ```
 
 ### Sequence Diagram
@@ -370,5 +390,62 @@ graph TD;
     B-->D;
     C-->D;
 ```	
-	
-	
+
+```mermaid	
+classDiagram
+Class01 <|-- AveryLongClass : Cool
+Class03 *-- Class04
+Class05 o-- Class06
+Class07 .. Class08
+Class09 --> C2 : Where am i?
+Class09 --* C3
+Class09 --|> Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+Class08 <--> C2: Cool label	
+```
+
+```mermaid
+gantt
+dateFormat  YYYY-MM-DD
+title Adding GANTT diagram to mermaid
+excludes weekdays 2014-01-10
+
+section A section
+Completed task            :done,    des1, 2014-01-06,2014-01-08
+Active task               :active,  des2, 2014-01-09, 3d
+Future task               :         des3, after des2, 5d
+Future task2               :         des4, after des3, 5d
+```
+
+```mermaid 
+  flowchart TD;
+      A[Using a flow<br>chart in GitHub] --> B{Must it be<br>accessible?};
+      B -- No --> C[Wrong,<br>try again];
+      B -- Yes --> D{Into what format<br>does it render?};
+      D -- JPG/PNG/GIF --> E{Does it have<br>an `alt`?};
+      E -- No --> V[Wrong,<br>try again];
+      E -- Yes, and it<br>is lengthy --> V[Wrong,<br>try again];
+      E -- Yes, a<br>brief one --> F[Manually add<br>a plain text<br>description<br>of the chart.];
+      D -- SVG --> G{What `role`<br>does it have?};
+      G -- `none` --> N[Wrong,<br>try again];
+      G -- `table` --> N[Wrong,<br>try again];
+      G -- `grid` --> N[Wrong,<br>try again];
+      G -- `presentation` --> Y[Manually add<br>a plain text<br>description<br>of the chart.];
+      G -- `image` --> H{Does it have<br>an `aria-label`?};
+      H -- No --> P[Wrong,<br>try again];
+      H -- Yes, and<br>it is lengthy --> P[Wrong,<br>try again];
+      H -- Yes, a<br>brief one --> Z[Manually add<br>a plain text<br>description<br>of the chart.];
+      G -- `tree` --> I{Does it contain<br>any `treeitem`<br>roles for the<br>text nodes?};
+      I -- No --> R[Wrong,<br>try again];
+      I -- Yes --> J{Are they contained<br>in / owned by `group`<br>roles beyond the<br>first level?};
+      J -- No --> S[Wrong,<br>try again];
+      J -- Yes --> K{Have you<br>tested in<br>any screen<br>reader?};
+      K -- No --> T[Wrong,<br>try again];
+      K -- Yes --> L{Did it accurately<br>convey relationships<br>and structure from<br>the chart?};
+      L -- No --> U[Wrong,<br>try again];
+      L -- Yes --> M[You should write a<br>CSUN talk about it];
+```
